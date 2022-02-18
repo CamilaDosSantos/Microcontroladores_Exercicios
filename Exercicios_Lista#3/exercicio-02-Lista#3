@@ -1,2 +1,0 @@
-2: Por que não é recomendável executar operações custosas e longas dentro de uma rotina ISR? 
-R:Pois o programa processa as interrupções com prioridade acima do programa normal, não podendo ter mais do limite pra que o processamento seja rapido.

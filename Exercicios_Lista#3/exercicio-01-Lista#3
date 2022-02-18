@@ -1,2 +1,0 @@
-1: Qual a principal vantagem em utilizar uma interrupção ao invés de checar peri odicamente o status de uma GPIO, por exemplo. 
-R:Por que a interrupção vai fazer com que o programa interrompa e te avise se estiver algo que não foi pré-definido pelo programa a ser executado . GPI não teria rapidez no envio de informações e eficiência  ao usuário.
