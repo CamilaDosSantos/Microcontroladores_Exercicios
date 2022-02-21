@@ -58,8 +58,8 @@ static void MX_ADC1_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 uint32_t valorEntrada = 1;
-float tensao= 1;
-uint32_t r2 = 1;
+uint32_t tensao;
+uint16_t botao;
 /* USER CODE END 0 */
 
 /**
@@ -102,23 +102,23 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  tensao = 3.3/4095.0* valorEntrada;
 
-	  r2 =(tensao * 680)/(3.3 - tensao);
+	  tensao = valorEntrada;
 
-	  if(tensao == 1 && tensao < 12){
-          botao = 1;
-	  }else if(tensao >= 1800 && tensao <= 2000){
-	   botao = 2;
-	  }else if(tensao >= 2500 && tensao <= 2700){
-           botao= 3;
-	  }else if(tensao >= 2800 && tensao <= 3000){
-           botao = 4;
-	  }else if(tensao >= 3090 && tensao <= 3500){
-          botao = 5;
-	  }else{
-	  botao=0;
-	  }
+	 	  if(tensao < 12){
+	           botao = 1;
+	 	  }else if(tensao >= 1800 && tensao <= 2000){
+	 	   botao = 2;
+	 	  }else if(tensao >= 2500 && tensao <= 2700){
+	            botao= 3;
+	 	  }else if(tensao >= 2800 && tensao <= 3000){
+	            botao = 4;
+	 	  }else if(tensao >= 3090 && tensao <= 3500){
+	           botao = 5;
+	 	  }else{
+	 	  botao=0;
+	 	  }
+
 
 
 
